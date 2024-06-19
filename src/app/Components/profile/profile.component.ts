@@ -12,4 +12,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 })
 export class ProfileComponent {
   public faFaceAngry = faAppleAlt
+
+  descargaCv(){
+    window.open("../../../assets/Cv-Hassen-Ayyoub-Chetti.pdf")
+  }
+
+
 }

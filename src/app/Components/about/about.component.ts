@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-about',
   standalone: true,
@@ -12,4 +14,5 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 export class AboutComponent {
   public faGraduationCap = faGraduationCap
   public faBriefcase = faBriefcase
+  public faArrowRight = faArrowRight
 }

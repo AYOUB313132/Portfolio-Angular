@@ -1,1 +1,8 @@
-<p>footer works!</p>
+<div class="container">
+  <p class="footer">Copyright &#169; 2024 Hassen Ayyoub Chetti. All Rights Reserved.</p>
+</div>
+
+<div class="top"  class="to-top" (click)="scrollToTop()" [class]="{ 'show-scrollTop': windowScrolled }">
+  <fa-icon [icon]="faArrowUp"></fa-icon>
+</div>
+

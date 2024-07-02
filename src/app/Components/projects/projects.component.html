@@ -1,0 +1,54 @@
+<!-- Star Projects -->
+<section id="proyectos" class="proyectos padding-top-bottom">
+  <div class="container">
+    <div class="section_txt">
+      <p class="txt-gris">Navigar por mi</p>
+      <h2 class="titulo-section">Proyectos</h2>
+    </div>
+    <div class="section-info row row-gap-3 column-gap-md-3 justify-content-center">
+      @for (p of projects; track $index) {
+        @defer (on viewport) {
+        <div class="card col-10 col-md-5 col-lg-3 justify-content-center">
+          <img  [src]="(p.image) ? '../../../assets/'+ p.image : 'https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg' "  class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="caption">
+              <h5 class="card-title text-center">{{p.name}}</h5>
+              <p class="card-text">{{p.Descreption}}</p>
+              <div class="tecnologie text-center">
+                @for (t of p.tecnologias; track $index) {
+                  <span class="badge  me-1">{{t}}</span>
+                }
+              </div>
+              <div class="card-links text-center">
+                @if (p.github_src) {
+                  <a [href]="p.github_src" target="_blank"  class="card-link"><fa-icon [icon]="faGithub"></fa-icon></a>
+                }
+
+                @if (p.link) {
+                  <a [href]="p.link" target="_blank" class="card-link"><fa-icon [icon]="faLocationArrow"></fa-icon></a>
+                }
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      }@placeholder (minimum 1000ms) {
+        <div class="card" style="width: 18rem;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-secondary text-white">Go somewhere</a>
+          </div>
+
+        </div>
+      }@error {
+        <p>Se ha producido un error al cargar el componente</p>
+      }
+    }@empty {
+      <p class="alert alert-danger">No hay Proyectos</p>
+    }
+    </div>
+  </div>
+</section>

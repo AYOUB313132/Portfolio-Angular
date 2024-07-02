@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 
-
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -14,7 +13,13 @@ body {
 html{
   scroll-behavior: smooth;
 }
-
+.card{
+  width: 100% !important;
+}
+.card > img{
+  width: 100% !important;
+  height: auto;
+}
 p
 {
   margin: 0;
@@ -41,8 +46,13 @@ a, .btn{
   --primery-color: #C84B31;
   --secondary-color: #2D4263;
   --background-clair: #ECDBBA;
+  --otro-color: #FEC8D8;
+  --otro-color-a: #D291BC;
   --black-color: #191919;
   --padding-section: 30px;
+  --background-color-box: rgb(250,250,250); /* #EEEEEE #29435C #152A38*/
+  --color-subtitulo: #29435C;
+  --hover-color-box: #EEEEEE;
 }
 
 /* ================ Clases General ================ */
@@ -68,6 +78,7 @@ a, .btn{
   font-weight: 600;
   color: gray;
   font-size: 14px;
+  text-align: center;
 }
 
 .titulo-section{
@@ -84,7 +95,7 @@ a, .btn{
   content: "";
   width: 0;
   background-color: #957DAD;
-  bottom: -2px;
+  bottom: -7px;
   left: 50%;
   transform: translateX(-50%);
   height: 5px;
@@ -94,6 +105,12 @@ a, .btn{
 .titulo-section:hover::before{
   width: 100%;
 }
+
+.sub-titulo{
+  color: var(--color-subtitulo);
+  font-size: 1.3rem;
+}
+
 .parrafo{
   margin-top: 20px;
   color: hsl(0, 1%, 53%);
@@ -119,7 +136,7 @@ a, .btn{
 /* ================ NavBar ================ */
 .navbar{
   height: 10vh;
-  background-color: #ECDBBA;
+  background-color: var(--hover-color-box);
   margin-top: 25px;
   border-radius: 10px;
 }
@@ -296,7 +313,7 @@ a:hover{
   }
 }
 
-/* ================ About ================ */
+/* ================ Sobre Me ================ */
 .about{
   text-align: center;
 }
@@ -312,22 +329,19 @@ a:hover{
 }
 .about .container .section-info .educacion ,
  .about .container .section-info .experencia{
-  border: 2px solid #C84B31;
+  border: 2px solid black;
   border-radius: 10px;
   padding: 10px 25px;
-  background-color: rgb(236, 219, 186,0.2);
+  background-color: rgb(250, 250, 250);
   transition: all 0.3s ease-in-out;
 }
 
 .about .container .section-info .educacion:hover ,
  .about .container .section-info .experencia:hover{
-  background-color:rgb(200, 75, 49, 0.4);
+  background-color: var(--hover-color-box);
 }
 
-.about .container .section-info .sub-titulo{
-  color: #957DAD;
-  font-size: 1.3rem;
-}
+
 
 .about .container .section-info .lista{
   display: flex;
@@ -361,8 +375,184 @@ a:hover{
     font-size: 1.8rem;
   }
 }
-/* ================ NAVBAR ================ */
+/* ================ Habilidades ================ */
 
-/* ================ NAVBAR ================ */
+.habilidades .container .section-info {
 
-/* ================ NAVBAR ================ */
+  margin-top: 20px;
+}
+
+.habilidades .container .section-info .front-end ,
+.habilidades .container .section-info .back-end ,
+ .habilidades .container .section-info .more-info{
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 25px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(250, 250, 250);
+}
+
+.habilidades .container .section-info .front-end:hover ,
+ .habilidades .container .section-info .back-end:hover,
+ .habilidades .container .section-info .more-info:hover{
+  background-color: var(--hover-color-box);
+}
+
+
+
+.habilidades .container .section-info .lista{
+  text-align: left;
+}
+
+.habilidades .container .section-info .lista li{
+  padding: 5px 0;
+  transition: all .5s ease-in-out;
+}
+.habilidades .container .section-info .lista li > fa-icon{
+  color: #C84B31;
+}
+
+@media (min-width:767px){
+
+}
+
+@media (min-width:991px){
+
+  .habilidades .container .section-info .sub-titulo{
+    font-size: 1.8rem;
+  }
+}
+/* ================ Proyectos ================ */
+.proyectos .container .section-info{
+  display: grid;
+  grid-template-columns : repeat(auto-fill, minmax(300px, 1fr) );
+  grid-gap: 20px;
+  margin-top: 20px;
+
+}
+.proyectos .container .section-info .card{
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid rgb(163,163,163);
+  background-color: rgb(250,250,250);
+}
+
+.proyectos .container .section-info .caption{
+  position: absolute;
+  bottom: -100%;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  padding: 10px;
+  left: 0;
+}
+
+.proyectos .container .section-info .caption .card-title {
+  color: #C84B31;
+  text-transform: uppercase;
+}
+
+.proyectos .container .section-info .caption .card-text{
+  font-size: 14px;
+  text-align: center;
+}
+
+.proyectos .container .section-info .card:hover .caption{
+  bottom: 0;
+}
+
+.proyectos .container .section-info .card:hover .caption .tecnologie > span{
+  background-color: #2D4263;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.proyectos .container .section-info .card:hover .caption .card-links > a{
+  margin-top: 20px;
+  color: #C84B31;
+  font-size: 25px;
+}
+
+/* ================ Contacto ================ */
+
+.contacto {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+.contacto .container .section-info{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  border: 0.1rem solid #191919;
+  background-color: rgb(250, 250, 250);
+  border-radius: 2rem;
+}
+.contacto .container .section-info .email,
+.contacto .container .section-info .linkedin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bd-violet-bg);
+  --bs-tooltip-color: var(--bs-white);
+}
+
+
+.footer
+{
+  display: flex;
+  justify-content: center;
+}
+
+.topp{
+  margin: 0.625rem auto 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5625rem;
+  cursor: pointer;
+  border: 5px solid var(--color-h2);
+  border-radius: 50%;
+  width: 3.125rem;
+  height: 3.125rem;
+  color: var(--hover);
+  transition: var(--transition-duration);
+
+  position: relative;
+}
+.to-top:hover{
+  border-color: var(--hover-color-box);
+  color: var(--color-h2);
+  animation: bouncing 1s infinite linear;
+}
+
+.to-top{
+  bottom: 0;
+  cursor: pointer;
+  margin: 0 12px 30px 0;
+  position: fixed;
+  right: 0;
+  opacity: 0;
+  font-size: 1.5625rem;
+  border: 5px solid var(--color-subtitulo);
+  border-radius: 50%;
+  width: 3.125rem;
+  height: 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-scrollTop {
+  opacity: 1 !important;
+  transition: all 0.2s ease-in-out;
+}

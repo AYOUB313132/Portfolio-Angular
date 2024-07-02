@@ -4,6 +4,8 @@ import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
+
+
 @Component({
   selector: 'app-about',
   standalone: true,
@@ -15,4 +17,5 @@ export class AboutComponent {
   public faGraduationCap = faGraduationCap
   public faBriefcase = faBriefcase
   public faArrowRight = faArrowRight
+  
 }

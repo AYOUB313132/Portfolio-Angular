@@ -1,6 +1,8 @@
-import { faAppleAlt } from '@fortawesome/free-solid-svg-icons';
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 
 
 @Component({
@@ -11,7 +13,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent {
-  public faFaceAngry = faAppleAlt
+
+  public faGithub = faGithub
+  public faLinkedin = faLinkedin
 
   descargaCv(){
     window.open("../../../assets/Cv-Hassen-Ayyoub-Chetti.pdf")
